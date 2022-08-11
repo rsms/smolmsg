@@ -140,6 +140,10 @@ Options:
 
 func must(err error) {
 	if err != nil {
-		fatalf(err)
+		if DEBUG {
+			panic(err)
+		} else {
+			fatalf(err)
+		}
 	}
 }
