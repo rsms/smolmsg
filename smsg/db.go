@@ -3,7 +3,6 @@ package main
 
 import (
   "database/sql"
-  "os"
   "sync"
 
   _ "modernc.org/sqlite"
@@ -19,7 +18,6 @@ type DB struct {
 }
 
 func (db *DB) Open() error {
-  os.Remove(DBFILE) // XXX DEBUG
   conn, err := sql.Open("sqlite", DBFILE)
   if err != nil {
     return err
