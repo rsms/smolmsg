@@ -94,7 +94,7 @@ Options:
 	os.Setenv("SMSG_MSGDIR", MSGDIR)
 	INBOXDIR = filepath.Join(MSGDIR, "inbox")
 	OUTBOXDIR = filepath.Join(MSGDIR, "outbox")
-	DBFILE = filepath.Join(MSGDIR, "index.db")
+	DBFILE = filepath.Join(MSGDIR, "smsg.db")
 	must(os.MkdirAll(INBOXDIR, 0700))
 	must(os.MkdirAll(OUTBOXDIR, 0700))
 	must(os.Chdir(MSGDIR))
